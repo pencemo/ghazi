@@ -85,7 +85,7 @@ body{
     position: fixed;
     top: 0;
     z-index: 9;
-    padding: 20px 0;
+    padding: 15px 0;
     transition: all .2s linear;
 }
 
@@ -130,7 +130,7 @@ body{
 }
 .main-li a:hover,
 .main-li:hover{
-    color: var(--prime-color);
+    color: var(--second-color);
 }
 .main-li a{
     position: relative;
@@ -141,7 +141,7 @@ body{
     width: 0;
     height: 2px;
     position: absolute;
-    background-color: var(--prime-color);
+    background-color: var(--second-color);
     bottom: 0;
     transition: all 0.5s;
     transform-origin: left;
@@ -270,6 +270,7 @@ body{
     position: relative;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
 .slide{
@@ -296,18 +297,18 @@ body{
 @keyframes slide-img{
     0%{
         opacity: .5;
-        transform: translateX(-50px);
+        transform: translateY(-50px) ;
     }
 }
 
 .img-1{
-    background-image:linear-gradient(45deg,rgba(0, 0, 0, .3),rgba(0,0,0,0.5)), url(./images/landbgmain.jpg);
+    background-image:linear-gradient(45deg,rgba(0, 0, 0, .5),rgba(0,0,0,0.6)), url(./images/landbgmain.jpg);
 }
 .img-2{
-    background-image:linear-gradient(45deg,rgba(0, 0, 0, .3),rgba(0,0,0,0.5)), url(./images/img-6.jpg);
+    background-image:linear-gradient(45deg,rgba(0, 0, 0, .5),rgba(0,0,0,0.6)), url(./images/img-6.jpg);
 }
 .img-3{
-    background-image:linear-gradient(45deg,rgba(0, 0, 0, .3),rgba(0,0,0,0.5)), url(./images/img-41.jpg);
+    background-image:linear-gradient(45deg,rgba(0, 0, 0, .5),rgba(0,0,0,0.6)), url(./images/3d-rendering-luxury-modern-living-room-with-leather-sofa-lamp.jpg);
 }
 .contant{
     z-index: 2;
@@ -348,12 +349,19 @@ body{
 
 
 .get-btn{
+    margin-top: 15px;
     animation: slide-text .5s linear .3s backwards;
 }
 .get-btn a{
     background-color: var(--flame);
     color: #fff;
     padding: 10px 25px;
+    transition: all .5s;
+}
+.get-btn a:hover{
+    background-color: var(--second-color);
+    color: #fff;
+    letter-spacing: 5px;
 }
 
 .next-pvr-btn{
@@ -361,10 +369,16 @@ body{
     position: absolute;
     display: flex;
     align-items: center;
-    gap: 150px;
-    bottom: 105px;
+    justify-content: center;
+    gap: 10px;
+    bottom: 100px;
+    width: 100%;
 }
-
+.line{
+    width: 100px;
+    height: 1px;
+    background-color: #fff;
+}
 
 .slide-btn{
     outline: none;
@@ -411,6 +425,9 @@ body{
 .scial-icon a{
     color: #fff;
 }
+.scial-icon a:hover{
+    color: var(--flame);
+}
 
 
 @media (max-width: 768px){
@@ -427,6 +444,9 @@ body{
         font-weight: 300;
         max-width: 90%;
         line-height: 20px;
+    }
+    .next-pvr-btn{
+        bottom: 30px;
     }
 }
 
