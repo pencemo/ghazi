@@ -64,21 +64,21 @@ AOS.init({
 
 // slide animation lading
 
-let slides = document.querySelectorAll(".slide-container");
+let slides = document.querySelectorAll(".slide");
 let index = 0;
 
 function next() {
-  slides[index].classList.remove("actv");
+  slides[index].classList.remove("act");
   index = (index + 1) % slides.length;
-  slides[index].classList.add("actv");
+  slides[index].classList.add("act");
 }
 
 function prev() {
-  slides[index].classList.remove("actv");
+  slides[index].classList.remove("act");
   index = (index - 1 + slides.length) % slides.length;
-  slides[index].classList.add("actv");
+  slides[index].classList.add("act");
 }
-// setInterval(next, 6000);
+setInterval(next, 6000);
 
 // ******************
 

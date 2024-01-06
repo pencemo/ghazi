@@ -18,6 +18,7 @@ body{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    /* background-color: var(--prime-color); */
 }
 
 .container{
@@ -83,7 +84,7 @@ body{
     background-color: #fff;
     position: fixed;
     top: 0;
-    z-index: 2;
+    z-index: 9;
     padding: 20px 0;
     transition: all .2s linear;
 }
@@ -103,7 +104,7 @@ body{
     position: relative;
 }
 .logo{
-    width: 170px;
+    width: 160px;
     position: relative;
 }
 .logo img{
@@ -171,10 +172,11 @@ body{
     /* navbar */
 
     .nav-links{
+        width: 100%;
+        height: 100vh;
         position: fixed;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        inset: 0;
+        /* transform: translate(-50%, -50%); */
         gap: 0;
         padding: 0;
         margin: 0;
@@ -187,7 +189,7 @@ body{
         z-index: 999;
     }
     .backgrund{
-        z-index: 99;
+        z-index: 999;
         width: 100%;
         height: 100vh;
         position: fixed;
@@ -262,102 +264,89 @@ body{
 
 /* landing Bg */
 
-.land-bg{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    /* background:linear-gradient(45deg,rgba(0, 0, 0, .3),rgba(0,0,0,0.5)), url(./images/landbgmain.jpg) no-repeat center; */
-    background-size: cover;
-    background-color: #000000;
-}
-.image-bg-land{
+.landing-bg{
     width: 100%;
     height: 100vh;
-    object-fit: cover;
-    object-position: right;
-    position: absolute;
-    inset: 0;
-    animation: scroll-img forwards;
-    animation-timeline: scroll();
-    animation-range: exit -200px;
-}
-@keyframes scroll-img{
-    to{
-        object-position: left;
-        opacity: 0;
-    }
+    position: relative;
+    display: flex;
+    justify-content: center;
 }
 
-.lan-conta{
-    display: flex;
-}
-.slide-container{
-    position: relative;
+.slide{
     width: 100%;
-    height: 100vh;
+    height: 100%;
     display: none;
     align-items: center;
+    justify-content: center;
+    text-align: center;
     z-index: 0;
+    background-color: #000000;
 }
-.image-div{
+.land-bg-img{
+    z-index: 1;
     position: absolute;
     width: 100%;
-    height: 90vh;
-    background-position: center;
+    height: 100%;
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
-    z-index: 3;
-    animation: slide .5s linear backwards;
+    animation: slide-img .5s linear backwards;
 }
 
-
-@keyframes slide{
+@keyframes slide-img{
     0%{
-        opacity: .7;
-        /* transform: scale(1.1); */
-        transform: rotateY(25deg);
+        opacity: .5;
+        transform: translateX(-50px);
     }
-  }
-
-  .slid{
-    display: grid;
-    gap: 20px;
-    align-items: center;
-    grid-template-areas: 'one tow';
-  }
-
-.img-div{
-    width: 100%;
-    grid-area: tow;
-    position: relative;
-  }
-
-.img-div img{
-    width: 100%;
 }
-.text-div{
+
+.img-1{
+    background-image:linear-gradient(45deg,rgba(0, 0, 0, .3),rgba(0,0,0,0.5)), url(./images/landbgmain.jpg);
+}
+.img-2{
+    background-image:linear-gradient(45deg,rgba(0, 0, 0, .3),rgba(0,0,0,0.5)), url(./images/img-6.jpg);
+}
+.img-3{
+    background-image:linear-gradient(45deg,rgba(0, 0, 0, .3),rgba(0,0,0,0.5)), url(./images/img-41.jpg);
+}
+.contant{
+    z-index: 2;
+    margin-top: 200px;
     display: flex;
     flex-direction: column;
-    grid-area: one;
+    align-items: center;
 }
-.text-div h1{
+.contant h1{
     font-family: 'Space Grotesk', sans-serif;
     color: #fff;
-    font-weight: 600;
     font-size: 60px;
-    line-height: 55px;
-    animation: slide-head .5s linear backwards;
+    line-height: 60px;
+    font-weight: 700;
+    animation: slide-text linear .5s backwards;
 }
-.text-div p{
+.contant p{
+    margin-top: 15px;
     color: #fff;
-    font-size: 15px;
+    font-size: 16px;
     font-weight: 300;
+    max-width: 70%;
     line-height: 20px;
-    max-width: 600px;
-    margin-bottom: 28px;
-    animation: slide-text .5s linear .3s backwards;
+    animation: slide-text linear .7s backwards;
 }
+
+@keyframes slide-text{
+    0%{
+        opacity: 0;
+        transform: translateY(50px);
+    }
+}
+
+
+.landing-bg .act{
+    display: flex;
+}
+
+
 .get-btn{
     animation: slide-text .5s linear .3s backwards;
 }
@@ -367,67 +356,33 @@ body{
     padding: 10px 25px;
 }
 
-@media (max-width: 768px){
-    .slid{
-        grid-template-areas: 'tow' 'one';
-      }
-      .img-div{
-        width: calc(100% - 40px);
-      }
-}
-
-
-
-
-@keyframes slide-head{
-    0%{
-        opacity: 0;
-        transform: translateY(-50px);
-    }
-  }
-@keyframes slide-text{
-    0%{
-        opacity: 0;
-        transform: translateY(50px);
-    }
-  }
-
-
-
-.slid{
+.next-pvr-btn{
     z-index: 4;
-}
-
-.slide-container.actv{
-    display: flex;
-}
-.land-btn-div{
     position: absolute;
-    width: 400px;
-    max-width: calc(100% - 150px);
-    height: 30px;
-    /* background-color: var(--balck-color); */
-    bottom: 100px;
     display: flex;
     align-items: center;
-    justify-content: end;
-    gap: 20px;
+    gap: 150px;
+    bottom: 105px;
 }
+
+
 .slide-btn{
-    z-index: 1;
     outline: none;
-    border: solid 1px #fff;
+    border: none;
     background-color: transparent;
     color: #fff;
     display: grid;
-    width: 45px;
+    width: 40px;
     height: 40px;
     place-content: center;
     opacity: .7;
     transition: all .5s;
+    border-radius: 50%;
 }
 .slide-btn:hover{
     opacity: 1;
+    background-color: #fff;
+    color: #000000;
 }
 
 .slide-btn i{
@@ -439,19 +394,46 @@ body{
 .next{
     right: 20px;
 }
+
 .scial-icon{
+    position: absolute;
+    z-index: 5;
+    background-color: #1d1d1d;
+    bottom: 50%;
     display: flex;
+    flex-direction: column;
+    align-items: center;
     gap: 10px;
+    right: 0;
+    transform: translate(0, 50%);
+    padding: 10px;
 }
-.scial-icon i{
+.scial-icon a{
     color: #fff;
-    /* background-color: #ffffff; */
-    display: grid;
-    place-content: center;
-    font-size: 20px;
 }
 
-/* ******************** */
+
+@media (max-width: 768px){
+    .contant h1{
+        font-size: 50px;
+        line-height: 50px;
+        font-weight: 700;
+        animation: slide-text linear .5s backwards;
+    }
+    .contant p{
+        margin-top: 15px;
+        color: #fff;
+        font-size: 16px;
+        font-weight: 300;
+        max-width: 90%;
+        line-height: 20px;
+    }
+}
+
+
+/* ************************* */
+
+
 
 
 
@@ -634,15 +616,15 @@ body{
 	background: #25d366;
 	color: white;
 	position: fixed;
-	bottom: 50px;
-	left: 50px;
+	bottom: 20px;
+	right: 20px;
 	font-size: 30px;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	width: 0;
 	height: 0;
-	padding: 30px;
+	padding: 25px;
 	text-decoration: none;
 	border-radius: 50%;
 	animation-name: pulse;
@@ -671,7 +653,7 @@ body{
 footer{
     width: 100%;
     padding: 50px 0;
-    background-color: #ffffff;
+    background-color: #1b1b1b;
     box-shadow: 5px 15px 30px var(--balck-color);
 }
 .footer-set{
@@ -684,7 +666,7 @@ footer{
     width: 200px;
 }
 .logo-des{
-    color: var(--balck-color);
+    color: #fff;
     margin-top: 10px;
     font-size: 15px;
     line-height: 23px;
@@ -698,24 +680,24 @@ footer{
 .icon-round{
     width: 35px;
     height: 35px;
-    background-color: #ececec;
+    background-color: var(--second-color);
     display: grid;
     place-content: center;
     border-radius: 50%;
     transition: all .2s;
 }
 .icon-round:hover{
-    background-color: #bebebe;
+    background-color: var(--prime-color);
 }
 .icon-round i{
     font-size: 18px;
-    color: #161616;
+    color: #fff;
 }
 
 .footer-head{
     font-size: 18px;
     font-weight: 500;
-    color: var(--balck-color);
+    color: #fff;
     position: relative;
     margin-bottom: 15px;
 }
@@ -724,7 +706,7 @@ footer{
     position: absolute;
     width: 50px;
     height: 1px;
-    background-color: var(--prime-color);
+    background-color: var(--flame);
     bottom: 0;
 }
 .footer-links{
@@ -734,7 +716,7 @@ footer{
 }
 .footer-contact-dts a,
 .footer-links a{
-    color: var(--balck-color);
+    color: #fff;
     font-size: 14px;
     font-weight: 400;
     transition: all .3s ;
@@ -783,7 +765,7 @@ footer{
 .bottom-line{
     width: 100%;
     height: 1px;
-    background-color: var(--balck-color);
+    background-color: #fff;
     margin-top: 100px;
 }
 .Copyright-raw{
@@ -793,11 +775,11 @@ footer{
 }
 .Copyright-raw p{
     font-size: 15px;
-    color: var(--balck-color);
+    color: #fff;
     font-weight: 300;
 }
 .Copyright-raw p a{
-    color: var(--balck-color);
+    color: #fff;
 }
 
 
