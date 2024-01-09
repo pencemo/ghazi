@@ -73,7 +73,24 @@ body{
     }
   } 
 
+/* **************** */
 
+.scoll-ind{
+    width: 0;
+    height: 2px;
+    background-color: var(--prime-color);
+    position: fixed;
+    top: 0;
+    z-index: 9999999;
+    animation: scroll-ind 1s linear;
+    animation-timeline: scroll();
+}
+
+@keyframes scroll-ind{
+    to{
+        width: 100%;
+    }
+}
 
 
 
@@ -343,7 +360,7 @@ body{
     line-height: 60px;
     letter-spacing: 2px;
     transform: translateY(50px);
-    transition: all .5s;
+    transition: all 1s;
     opacity: 0;
     visibility: hidden;
 }
@@ -355,7 +372,7 @@ body{
     max-width: 70%;
     line-height: 20px;
     transform: translateY(50px);
-    transition: all .7s;
+    transition: all 1.2s;
     opacity: 0;
 }
 .act .contant h1{
@@ -370,7 +387,7 @@ body{
 
 .home-btn{
     transform: translateY(50px);
-    transition: all 1s;
+    transition: all 1.4s;
     opacity: 0;
     visibility: hidden;
 }
@@ -466,17 +483,17 @@ body{
 
 @media (max-width: 768px){
     .contant h1{
-        font-size: 50px;
+        font-size: 45px;
         line-height: 50px;
         animation: slide-text linear .5s backwards;
     }
     .contant p{
         margin-top: 15px;
         color: #fff;
-        font-size: 14px;
+        font-size: 13px;
         font-weight: 300;
         max-width: 90%;
-        line-height: 20px;
+        line-height: 16px;
     }
     .next-pvr-btn{
         bottom: 30px;
@@ -536,6 +553,20 @@ body{
     z-index: 9;
 }
 
+.con-wrap{
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+}
+.con-wrap h1{
+    color: var(--balck-color);
+}
+.con-wrap p{
+    font-size: 18px;
+    font-weight: 300;
+    color: #999999;
+}
+
 
 @media (max-width: 768px){
     .about-container{
@@ -544,6 +575,11 @@ body{
     }
     .image-div img{
         width: 100%;
+    }
+    .about-text h1{
+        font-family: 'Abril Fatface', serif;
+        font-size: 40px;
+        line-height: 45px;
     }
 }
 
@@ -608,6 +644,7 @@ body{
     font-size: 30px;
 }
 .banner-text h4{
+    font-weight: 400;
     color: #fff;
     font-size: 16px;
     margin: 0;
@@ -620,6 +657,29 @@ body{
     max-width: 200px;
     line-height: 14px;
 }
+.banner-head{
+    display: flex;
+    justify-content: center;
+}
+.banner-head h4{
+    font-family: 'Raleway', sans-serif;
+    color: #fff;
+    margin-bottom: 80px;
+    font-size: 23px;
+    font-weight: 400;
+    position: relative;
+    display: inline;
+}
+.banner-head h4::before{
+    content: "";
+    position: absolute;
+    width: 40px;
+    height: 1px;
+    background-color: #fff;
+    left: -50px;
+    bottom: 50%;
+}
+
 
 @media (max-width: 768px){
     
@@ -627,6 +687,19 @@ body{
         width: 100%;
         display: flex;
         gap: 20px 20px ;
+    }
+    .banner-head h4{
+        margin-bottom: 30px;
+        font-size: 20px;
+    }
+    .banner-head h4::before{
+        content: "";
+        position: absolute;
+        width: 40px;
+        height: 1px;
+        background-color: #fff;
+        left: 0;
+        top: 0;
     }
 }
 
@@ -678,94 +751,6 @@ body{
 }
 
 
-/* section 3 */
-.head-choose{
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-.head-choose h1{
-    margin: 20px 0;
-    font-size: 35px;
-    font-weight: 600;
-}
-.head-choose h1 span{
-    background-color: var(--prime-color);
-    color: #fff;
-    padding: 0 5px;
-    font-weight: 500;
-}
-.mani-container{
-    width: 100%;
-    background-color: #ffffed;
-    margin: 10px 0;
-    padding: 80px 0;
-}
-.img-set{
-    margin-bottom: 20px;
-    padding-right: 50px;
-}
-.man-bg-cont{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    justify-content: end;
-    padding-right: 50PX;
-    align-items: end;
-    position: relative;
-    z-index: 1;
-    background-image: url(./images/img-5.jpg);
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-}
-.man-img {
-    z-index: 5;
-}
-.man-img img{
-    width: 250px;
-}
-.box-2{
-    position: absolute;
-    width: 270PX;
-    height: 300px;
-    border: solid 3px var(--prime-color);
-    z-index: 4;
-}
-
-
-.Quality-sect{
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    margin-top: 20px;
-}
-.set-icon i{
-    font-size: 30px;
-    color: var(--prime-color);
-}
-.set-1{
-    display: flex;
-    gap: 25px;
-}
-.set-text h3{
-    font-size: 22px;
-    color: #1b1b1b;
-}
-.set-text p{
-    font-size: 14px;
-    color: #1b1b1b;
-    line-height: 18px;
-    max-width: 400px;
-}
-.line-dvr{
-    width: 100%;
-    height: 1px;
-    background-color: var(--prime-color);
-}
-
-/* *********************** */
 
 /* whatsappicon */
 

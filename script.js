@@ -59,7 +59,8 @@ function nav_toggle() {
 // *************************
 
 AOS.init({
-  duration: 1000,
+  duration: 700,
+  delay: 200,
 });
 
 // slide animation lading
