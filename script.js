@@ -78,7 +78,7 @@ function prev() {
   index = (index - 1 + slides.length) % slides.length;
   slides[index].classList.add("act");
 }
-setInterval(next, 6000);
+setInterval(prev, 6000);
 
 // ******************
 
