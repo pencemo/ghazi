@@ -274,24 +274,38 @@ body{
 }
 
 .slide{
+    position: absolute;
     width: 100%;
     height: 100%;
-    display: none;
+    display: flex;
+    visibility: hidden;
     align-items: center;
     justify-content: center;
     text-align: center;
     z-index: 0;
     background-color: #000000;
 }
+.landing-bg .act{
+    display: flex;
+    visibility: visible;
+}
+
 .land-bg-img{
+    overflow: hidden;
     z-index: 1;
     position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
-    animation: slide-img .5s linear backwards;
+    opacity: .3;
+    transition: all .5s;
+    /* animation: slide-img .5s linear backwards; */
+}
+.act .land-bg-img{
+    opacity: 1;
 }
 
 @keyframes slide-img{
@@ -322,8 +336,11 @@ body{
     color: #fff;
     font-size: 60px;
     line-height: 60px;
-    animation: slide-text linear .5s backwards;
     letter-spacing: 2px;
+    transform: translateY(50px);
+    transition: all .5s;
+    opacity: 0;
+    visibility: hidden;
 }
 .contant p{
     margin-top: 15px;
@@ -332,7 +349,18 @@ body{
     font-weight: 300;
     max-width: 70%;
     line-height: 20px;
-    animation: slide-text linear .7s backwards;
+    transform: translateY(50px);
+    transition: all .7s;
+    opacity: 0;
+}
+.act .contant h1{
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
+}
+.act .contant p{
+    opacity: 1;
+    transform: translateY(0);
 }
 
 @keyframes slide-text{
@@ -343,14 +371,19 @@ body{
 }
 
 
-.landing-bg .act{
-    display: flex;
-}
 
 
 .get-btn{
     margin-top: 15px;
-    animation: slide-text .5s linear .3s backwards;
+    transform: translateY(50px);
+    transition: all .9s;
+    opacity: 0;
+    visibility: hidden;
+}
+.act .contant .get-btn{
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible;
 }
 .get-btn a{
     background-color: var(--flame);
