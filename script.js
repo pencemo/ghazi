@@ -1,20 +1,32 @@
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 1,
-  effect: "fade",
+  slidesPerView: 2,
+  // effect: "fade",
   autoplay: {
-    delay: 4000,
-    disableOnInteraction: true,
+    delay: 2500,
+    disableOnInteraction: false,
   },
 
   pagination: {
     el: ".swiper-pagination",
-    clickable: true,
     dynamicBullets: true,
+    clickable: true,
   },
-  navigation: {
-    nextEl: ".swiper-button-next",
-    prevEl: ".swiper-button-prev",
+
+  breakpoints: {
+    576: {
+      slidesPerView: 3,
+    },
+    768: {
+      slidesPerView: 4,
+    },
+    1200: {
+      slidesPerView: 6,
+    },
   },
+  // navigation: {
+  //   nextEl: ".swiper-button-next",
+  //   prevEl: ".swiper-button-prev",
+  // },
 });
 
 // scroll
@@ -59,7 +71,7 @@ function nav_toggle() {
 // *************************
 
 AOS.init({
-  duration: 700,
+  duration: 900,
   delay: 200,
 });
 
