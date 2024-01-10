@@ -30,37 +30,37 @@
 
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+
 
 </head>
 <body>
 
     <div class="loader-div">
         <span class="loader"></span>
-
     </div>
 
+    <div class="scoll-ind"></div>
+    
     <nav class="nav-bar">
         <div class="container">
             <div class="raw nav-container">
-                <div class="logo"><img src="./images/logo-1.png" alt=""></div>
+                <div class="logo"><a href="index.html"><img src="./images/logo-1.png" alt=""></a></div>
+                <div class="backgrund"></div>
                 <div class="nav-links">
                     <ul class="nav-links-ul">
-                        <li class="main-li"><a href="./index.html">Home</a></li>
-                        <li class="main-li"><a href="#">About Us</a></li>
-                        <li class="product-drop main-li" onclick="dropdown()">Products <i class="fa-solid fa-chevron-down"></i>
-                            <ul class="dropdown-ul" >
-                                <li><a href="./product.html">Door & Windows</a></li>
-                                <li><a href="./product.html">Aluminium & Glazing</a></li>
-                                <li><a href="./product.html">Interior Shades</a></li>
-                                <li><a href="./product.html">Outdoor Shades</a></li>
-                                <li><a href="./product.html">Curtain Wall</a></li>
-                                <li><a href="./product.html">Car shades & tends</a></li>
-                                <li><a href="./product.html">Aluminium Pergolas</a></li>
-                            </ul>
-                        </li>
-                        <!-- <li class="main-li"><a href="">Project</a></li> -->
+                        <li class="main-li"><a href="#">Home</a></li>
+                        <li class="main-li"><a href="./About.html">About Us</a></li>
+                        <li class="main-li"><a href="">Products</a></li>
                         <li class="main-li"><a href="./contact.html">Contact</a></li>
                         <div id="google_translate_element"></div>
+                        <div class="close"><i class=" fa-sharp fa-regular fa-xmark-large "></i></div>
+                        <div class="nav-icos">
+                            <a href="https://www.facebook.com/profile.php?id=100090192650725&mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/mghazifurniture?igsh=NWNnZGZyNjZpd2Jl"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="mailto:mghazitrading@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                            <a href="https://wa.me/+971543266421"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
                     </ul>
                 </div>
                 <div class="toggle-btn" onclick="nav_toggle()"><i class="fa-sharp fa-regular fa-bars"></i></div>
@@ -72,215 +72,199 @@
 
 <style>
     :root{
-    --prime-color: #f33434;
+    --prime-color: #994D22;
+    --balck-color: #1b1b1b;
+    --second-color: #e87324;
+    --flame: #E95D24ff;
+    --red: #FF0000ff;
+}
+
+    
+    .about-set{
+        position: relative;
+        width: 100%;
+        height: 60vh;
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+    .about-banner{
+        position: absolute;
+        top: 0;
+        width: 100%;
+        height: 50vh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-image:linear-gradient(45deg,rgba(3, 3, 3, 0.8),rgba(0,0,0,0.5)), url(./images/3d-rendering-luxury-modern-living-room-with-leather-sofa-lamp.jpg);
+        clip-path: path("M1919.99,0v368.28c-89.93-17.87-184.33-13.7-275.68-0.96c-115.78,16.15-229.49,45.54-345.54,59.59C867.25,479.14,421.08,318.08,0,422.24V0H1919.99z");
+        z-index: 2;
     }
 
-    .about-sect{
-        margin: 150px 0;
+    .about-head{
+        z-index: 3;
     }
-    .about-raw{
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-        justify-content: center;
+    .about-head h1{
+        font-family: 'Abril Fatface', serif;
+        color: #fff;
+        font-size: 50px;
+        margin-bottom: 5px;
     }
-    .imgbox{
-        width: 100%;
-        height: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
+    .about-head p{
+        color: #fff;
+        font-weight: 300;
+        font-size: 19px;
         position: relative;
     }
-    .bgimgbox{
-        width: 90%;
-        max-width: 400px;
-    }
-    .bgimgbox img{
-        width: 100%;
-    }
-    .ab-set-2{
-        margin-top: 50px;
-    }
-    .ab-text-side h1{
-        font-size: 45px;
-        font-weight: 600;
-        margin: 0;
-    }
-    .ab-text-side h1 span{
-        color: var(--prime-color);
-    }
-    .ab-text-side h4{
-        font-size: 25px;
-        font-weight: 400;
-        margin-bottom: 20px;
-    }
-    .ab-text-side p{
-        font-size: 16px;
-        font-weight: 400;
-    }
-    .divdr{
-        width: 100%;
+    .about-head p::after{
+        content: "";
+        width: 50px;
         height: 1px;
-        background-color: var(--prime-color);
+        background-color: #fff;
+        position: absolute;
+        top: 50%;
+        margin-left: 30px;
     }
+
+    .about-set-2{
+        display: grid;
+        gap: 30px;
+        align-items: center;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 'one tow';
+        padding-bottom: 130px;
+    }
+
+
+    .about-image-div{
+        grid-area: one;
+        width: 100%;
+        /* height: 500px; */
+        position: relative;
+        display: grid;
+        grid-template-columns: 50% 50% ;
+        gap:30px 10px ;
+    }
+    .about-image-div img{
+        width: 90%;
+        height: 230px;
+        object-fit: cover;
+        position: relative;
+        filter: grayscale(50%);
+    }
+    .about-image-div img:first-child{
+        top: 30px;
+    }
+    .about-image-div img:nth-child(3){
+        top: 30px;
+    }
+
+    .about-text-div{
+        grid-area: tow;
+        width: 100%;
+    }
+
+    .sec-head{
+        font-size: 22px;
+        color: #dddddd;
+        font-weight: 400;
+        position: relative;
+    }
+    .sec-head::before{
+        content: "";
+        position: absolute;
+        bottom: 50%;
+        left: -30px;
+        width: 22px;
+        height: 2px;
+        background-color: #dddddd;
+    }
+    .about-text-div h1, .about-text-div h1 span{
+        font-family: 'Abril Fatface', serif;
+        font-size: 30px;
+        color: #000000;
+        font-weight: 300;
+        position: relative;
+    }
+
+    .about-text-div h1 span{
+        color: var(--second-color);
+    }
+
+    .about-text-div p{
+        font-size: 14px;
+    }
+
+    .get-btn{
+        margin-top: 40px;
+    }
+    
+
+    @media (max-width: 768px){
+        .about-set-2{
+            display: grid;
+            grid-template-columns: 100% 100%;
+            grid-template-areas: 'one' 'tow';
+        }
+        .about-text-div{
+            margin-top: 50px;
+        }
+    }
+
 </style>
 
-<section class="about-sect">
-    <div class="container">
-        <div class="raw about-raw">
-            <div class="ab-set-1 col-lg-6">
-                <div class="imgbox">
-                    <div class="bgimgbox"><img src="./images/man---2.png" alt=""></div>
-                </div>
-            </div>
-            <div class="ab-set-2 col-lg-6">
-                <div class="ab-text-side">
-                    <h1>About <span>Us</span></h1>
-                    <h4>Zoom Aluminum<div class="divdr"></div></h4>
-                    
-                    <p>ZOOM Aluminum  is a rapidly expanding steel door manufacturer based in Dubai. We specialize in the design and manufacturing of doors for both residential homes and commercial spaces. From our inception, we have taken great pride in supporting the communities in which we live and work. <br><br>
+<!-- *********************** -->
 
-                    Uniquely, we refrain from comparing our products with other brands because we craft each door with an extra emphasis on quality, ensuring a safe and aesthetically pleasing complement to various architectural elements in your home. Our commitment to doing things right, even if it means doing them a little differently, sets us apart.<br><br>
-                    
-                    ZOOM Aluminum is dedicated to environmental responsibility, taking a comprehensive approach to protect trees and the environment. Despite our commitment to sustainability, we never compromise on materials, ensuring that our doors are built with robust and secure meterials<br><br>
-                    
-                    In Dubai, our doors undergo rigorous performance testing for excellent weather resistance, durability, and color retention. When you choose ZOOM Aluminum , you can trust that the same high-quality materials and manufacturing processes are consistently applied across our entire product line. Experience the strength, safety, and style that define ZOOM  doors.</p>
-                    <div class="get-btn more-btn"><a class="more-btn-a" href="./contact.html">Get In Touch</a></div>
 
-                </div>
-            </div>
-        </div>
+
+<section class="about-set">
+    <div class="about-banner"></div>
+    <div class="about-head container ">
+        <h1>About Us</h1>
+        <p>Ghazi Homeware - Deira, Dubai</p>
     </div>
 </section>
 
 
-<style>
-    .team-set{
-        margin-bottom: 50px;
-        background-color: rgb(255, 243, 190);
-        padding: 50px;
-        text-align: center;
-    }
-    .team{
-        width: 100%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 30px 70px;
-    }
+<!-- *********************** -->
+<section>
+    <div class="container">
+        <div class="about-set-2">
+            <div class="about-image-div" data-aos="fade-right" data-aos-delay="200">
+                <img src="./images/img-1.jpg" alt="">
+                <img src="./images/img-2.jpg" alt="">
+                <img src="./images/img-3.jpg" alt="">
+                <img src="./images/img-4.jpg" alt="">
+            </div>
+            <div class="about-text-div">
+                <h4 class="sec-head" data-aos="fade-right" data-aos-delay="200">We Are</h4>
+                <h1 data-aos="fade-right" data-aos-delay="250">About <span>Ghazi Homeware</span></h1>
+                <p data-aos="fade-right" data-aos-delay="300">Welcome to Ghazi Homeware, a distinguished destination for premium homeware products in the vibrant heart of Deira, Dubai. Established with a commitment to elevate living spaces, Ghazi Homeware brings together an exquisite collection of flooring, curtains, wallpaper, and furniture to meet the diverse tastes and preferences of our esteemed customers.                </p>
+            
+                <h1 data-aos="fade-right" data-aos-delay="300">Our Vision</h1>
+                <p data-aos="fade-right" data-aos-delay="400">At Ghazi Homeware, we envision homes and spaces that reflect individuality, comfort, and timeless elegance. Our passion lies in curating a selection of homeware products that not only meet functional needs but also inspire a sense of aesthetic pleasure.</p>
+                <div class="get-btn" data-aos="fade-right" data-aos-delay="450"><a href="">Connect With Us</a></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- *********************** -->
 
-    .team-img-1{
-        width: 250px;
-        height: 250px;
-        overflow: hidden;
-        object-fit: cover;
-        object-position: center;
-    }
-    .team-img-1 img{
-        width: 100%;
-    }
-    .raws{
+<style>
+    .team-head{
         display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: var(--prime-color);
-        padding-bottom: 10px;
-        /* cursor: pointer; */
-        transition: all .2s linear;
-        overflow: hidden;
-        position: relative;
-    }
-    .raws:hover{
-        border-radius: 70px 70px 0;
-    }
-    .raws h2{
-        font-size: 20px;
-        font-weight: 600;
-        margin: 0;
-        margin-top: 10px;
-        color: #ffffff;
-    }
-    .raws p{
-        font-size: 16px;
-        font-weight: 300;
-        margin: 0;
-        margin-bottom: 5px;
-        color: #ffffff;
-    }
-    .team-icon{
-        display: flex;
-        gap: 10px;
-        position: absolute;
-        bottom: 40px;
-        transition: all .5s;
-        opacity: 0;
-        padding:  5px 100%;
-        background: linear-gradient(45deg,rgba(0, 0, 0, .7),rgba(139, 0, 0, 0));
-    }
-    .raws:hover .team-icon{
-        display: flex;
-        gap: 10px;
-        position: absolute;
-        bottom: 73px;
-        transition: all .5s;
-        opacity: 1;
-    }
-    .team-icon a{
-        color: #ffffff;
-        
-    }
-    .team-icon a i{
-        padding: 5px;
-        border-radius: 50%;
-        transition: all .3s linear;
-    }
-    .team-icon a i:hover{
-        background-color: var(--prime-color);
-    }
-    .head-team{
-        font-size: 30px;
-        margin: 0;
-        padding: 0;
-        margin-bottom: 40px;
-    }
-    .head-team span{
-        background-color: var(--prime-color);
-        padding: 0 5px;
-        color: #ffffff;
+        justify-content: center;
     }
 </style>
 
-
-<section class="team-set"><h1 class="head-team">Meet the <span>Team</span></h1>
+<section>
     <div class="container">
-        
-        <div class="raw team">
-            <div class="raws">
-                <div class="team-img-1">
-                    <img src="./images/ps-img-2.jpg" alt="">
-                </div>
-                <h2>Rashid Zaman</h2>
-                <p>Director</p>
-                <div class="team-icon">
-                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
-                </div>
-            </div>
-            <div class="raws">
-                <div class="team-img-1">
-                    <img src="./images/ps img 1.jpg" alt="">
-                </div>
-                <h2>Wajid Zaman</h2>
-                <p>Assistant Director</p>
-                <div class="team-icon">
-                    <a href=""><i class="fa-brands fa-facebook"></i></a>
-                    <a href=""><i class="fa-brands fa-instagram"></i></a>
-                    <a href=""><i class="fa-brands fa-x-twitter"></i></a>
-                </div>
-            </div>
+        <div class="team-head">
+            <h1 class="sec-head">Meat Our Team</h1>
+        </div>
+        <div class="team-container">
+
         </div>
     </div>
 </section>
@@ -294,12 +278,12 @@
             <div class="col-sm-6 col-md-6 col-lg-4  footer-set-box">
               <div>
                 <img class="logo-footer" src="./images/logo-1.png" alt="">
-                <p class="logo-des">ZOOM Aluminium is a rapidly expanding aluminium door and windows manufacturer based in Dubai.</p>
+                <p class="logo-des">Ghazi Homeware envisions homes reflecting individuality, comfort, and timeless elegance. We curate homeware that meets functional needs and inspires aesthetic pleasure.</p>
                 <div class="footer-icon">
-                    <a href="http://facebook.com/zoomaluminiumdubai"><div class="icon-round"><i class="fa-brands fa-facebook-f"></i></div> </a>
-                    <a href="https://www.instagram.com/zoomaluminiumdubai/"><div class="icon-round"><i class="fa-brands fa-instagram"></i></div> </a>
-                    <a href="https://wa.me/+971559159312"><div class="icon-round"><i class="fa-brands fa-whatsapp"></i></div> </a>
-                    <a href=""><div class="icon-round"><i class="fa-brands fa-linkedin"></i></div> </a>
+                    <a href="https://www.facebook.com/profile.php?id=100090192650725&mibextid=ZbWKwL"><div class="icon-round"><i class="fa-brands fa-facebook-f"></i></div> </a>
+                    <a href="https://www.instagram.com/mghazifurniture?igsh=NWNnZGZyNjZpd2Jl"><div class="icon-round"><i class="fa-brands fa-instagram"></i></div> </a>
+                    <a href="https://wa.me/+971543266421"><div class="icon-round"><i class="fa-brands fa-whatsapp"></i></div> </a>
+                    <a href="mailto:mghazitrading@gmail.com"><div class="icon-round"><i class="fa-solid fa-envelope"></i></div> </a>
                 </div>
               </div>
             </div>
@@ -316,29 +300,31 @@
             <div class="col-sm-6 col-md-3 col-lg-2 footer-set-box" >
                 <h3 class="footer-head">Our Products</h3>
                 <ul class="footer-links">
-                    <li><a href="./product.html">Door & Windows</a></li>
-                    <li><a href="./product.html">Aluminium & Glazing</a></li>
-                    <li><a href="./product.html">Interior Shades</a></li>
-                    <li><a href="./product.html">Outdoor Shades</a></li>
-                    <li><a href="./product.html">Curtain Wall</a></li>
-                    <li><a href="./product.html">Car shades & tends</a></li>
+                    <li>Flooring</li>
+                    <li>Curtains</li>
+                    <li>Wallpaper</li>
+                    <li>Wall cladding</li>
+                    <li>Furniture</li>
                   </ul>
             </div>
             <div class="col-sm-6 col-md-6 col-lg-4 footer-set-box">
                 <h3 class="footer-head">Office</h3>
-                <p class="logo-des footer-ads">Shop No-3 - Naif St - opposite Khalid Mosque, Deira - Dubai - United Arab Emirates</p>
-                <div class="footer-contact-dts"><a href="tel:+971559159312"><i class="fa-sharp fa-solid fa-phone"></i>+971 45 754 944, +971 55 915 9312</a></div>
-                <div class="footer-contact-dts"><a href="mailto:zoomtech45@gmail.com"><i class="fa-solid fa-envelope"></i>zoomtech45@gmail.com</a></div>
+                <p class="logo-des footer-ads">5 18th Street - Deira, Dubai - United Arab Emirates</p>
+                <div class="footer-contact-dts"><a href="tel:+971543266421"><i class="fa-sharp fa-solid fa-phone"></i>+971 54 326 6421</a></div>
+                <div class="footer-contact-dts"><a href="mailto:mghazitrading@gmail.com"><i class="fa-solid fa-envelope"></i>mghazitrading@gmail.com</a></div>
                 <div class="footer-input">
-                    <input type="text" placeholder="Enter Your Email">
+                    <input type="text" placeholder="Enter Your Email" autocomplete="of">
                     <i class="fa-sharp fa-solid fa-paper-plane"></i>
                 </div>
             </div>
     
         </div>
+        
+        
+
         <div class="raw bottom-line"></div>
         <div class="raw Copyright-raw">
-            <p>© All Copyright reserved By Zoom, 2023</p>
+            <p>© All Copyright reserved By Ghazi Homeware, 2024</p>
             <p>Powered by <a href="https://neptunemark.com/">NeptuneMark</a></p>
         </div>
     </div>
