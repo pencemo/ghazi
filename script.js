@@ -1,5 +1,6 @@
 var swiper = new Swiper(".mySwiper", {
   slidesPerView: 2,
+  spaceBetween: 10,
   // effect: "fade",
   autoplay: {
     delay: 2500,
@@ -129,31 +130,39 @@ function googleTranslateElementInit() {
 const images =[
   Flooring={
       img1 : "./images/img-1.jpg",
-      img2 : "./images/img-1.jpg",
-      img3 : "./images/img-1.jpg",
-      img4 : "./images/img-1.jpg",
-      img5 : "./images/img-1.jpg",
+      img2 : "./images/img-2.jpg",
+      img3 : "./images/img-3.jpg",
+      img4 : "./images/img-10.jpg",
+      img5 : "./images/img-12.jpg",
+      img6 : "./images/img-11.jpg",
+      img7 : "./images/img-7.jpg",
   },
   Furniture={
-      img1 : "./images/img-2.jpg",
-      img2 : "./images/img-2.jpg",
-      img3 : "./images/img-2.jpg",
-      img4 : "./images/img-2.jpg",
-      img5 : "./images/img-2.jpg",
+      img1 : "./images/123.png",
+      img2 : "./images/img-41.jpg",
+      img3 : "./images/landbgmain.jpg",
+      img4 : "./images/627.png",
+      img5 : "./images/landmarks-modern-city.jpg",
+      img6 : "./images/img-29.jpg",
+      img7 : "./images/img-30.jpg",
   },
   Curtains={
-      img1 : "./images/img-3.jpg",
-      img2 : "./images/img-3.jpg",
-      img3 : "./images/img-3.jpg",
-      img4 : "./images/img-3.jpg",
-      img5 : "./images/img-3.jpg",
+      img1 : "./images/img-20.jpg",
+      img2 : "./images/img-21.jpg",
+      img3 : "./images/img-22.jpg",
+      img4 : "./images/img-23.jpg",
+      img5 : "./images/img-24.jpg",
+      img6 : "./images/img-25.jpg",
+      img7 : "./images/img-26.jpg",
   },
   Wallpaper={
-      img1 : "./images/img-4.jpg",
-      img2 : "./images/img-4.jpg",
-      img3 : "./images/img-4.jpg",
-      img4 : "./images/img-4.jpg",
-      img5 : "./images/img-4.jpg",
+      img1 : "./images/img-31.jpg",
+      img2 : "./images/img-32.jpg",
+      img3 : "./images/img-33.jpg",
+      img4 : "./images/img-34.webp",
+      img5 : "./images/img-35.webp",
+      img6 : "./images/img-36.webp",
+      img7 : "./images/img-37.webp",
   },
 ];
 
@@ -173,6 +182,8 @@ function model_open_1() {
   document.querySelector(".model-img-3").src=Flooring.img3
   document.querySelector(".model-img-4").src=Flooring.img4
   document.querySelector(".model-img-5").src=Flooring.img5
+  document.querySelector(".model-img-6").src=Flooring.img6
+  document.querySelector(".model-img-7").src=Flooring.img7
   document.querySelector(".model").classList.add("model-active")
 }
 
@@ -184,6 +195,8 @@ function model_open_2() {
   document.querySelector(".model-img-3").src=Furniture.img3
   document.querySelector(".model-img-4").src=Furniture.img4
   document.querySelector(".model-img-5").src=Furniture.img5
+  document.querySelector(".model-img-6").src=Furniture.img6
+  document.querySelector(".model-img-7").src=Furniture.img7
   document.querySelector(".model").classList.add("model-active")
 }
 
@@ -195,6 +208,8 @@ function model_open_3() {
   document.querySelector(".model-img-3").src=Curtains.img3
   document.querySelector(".model-img-4").src=Curtains.img4
   document.querySelector(".model-img-5").src=Curtains.img5
+  document.querySelector(".model-img-6").src=Curtains.img6
+  document.querySelector(".model-img-7").src=Curtains.img7
   document.querySelector(".model").classList.add("model-active")
 }
 
@@ -206,6 +221,8 @@ function model_open_4() {
   document.querySelector(".model-img-3").src=Wallpaper.img3
   document.querySelector(".model-img-4").src=Wallpaper.img4
   document.querySelector(".model-img-5").src=Wallpaper.img5
+  document.querySelector(".model-img-6").src=Wallpaper.img6
+  document.querySelector(".model-img-7").src=Wallpaper.img7
   document.querySelector(".model").classList.add("model-active")
 }
 
