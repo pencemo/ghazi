@@ -30,6 +30,8 @@
 
     <!-- google font -->
     <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
 
 </head>
 <body>
@@ -92,13 +94,14 @@
         width: 100%;
         /* height: 60vh; */
         /* margin-top: 20px; */
-        padding: 20px 0;
+        padding: 50px 0;
         padding-top: 120px;
         display: flex;
         align-items: center;
         background: url(./images/product-bg.jpg) no-repeat center;
         background-size: cover;
         background-position: bottom;
+        overflow: hidden;
     }
     .banner-content{
         display: grid;
@@ -109,6 +112,7 @@
     }
     .banner-texts{
         grid-area: one;
+        /* overflow: hidden; */
     }
     .banner-texts h1{
         font-family: 'Abril Fatface', serif;
@@ -148,7 +152,7 @@
             grid-template-areas: "tow" "one";
         }
         .lamp{
-            right: 20px;
+            left: 20px;
             width: 120px;
         }
     }
@@ -164,13 +168,13 @@
     <div class="container">
         <div class="banner-content">
             <div class="banner-texts">
-                <h1>Our Products</h1>
-                <p>maxime ipsa sed, omnis quaerat facere perferendis consequatur voluptatum, molestias deserunt voluptatem debitis, optio obcaecati maiores assumenda itaque nulla corporis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, ut laudantium. Reprehenderit quibusdam voluptatibus suscipit dolores! Sit explicabo odio a</p>
-                <div class="get-btn"><a href="./product.html" >Get start</a></div>
+                <h1 data-aos="fade-left" data-aos-delay="200">Our Products</h1>
+                <p data-aos="fade-left" data-aos-delay="250">maxime ipsa sed, omnis quaerat facere perferendis consequatur voluptatum, molestias deserunt voluptatem debitis, optio obcaecati maiores assumenda itaque nulla corporis! Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea, ut laudantium. Reprehenderit quibusdam voluptatibus suscipit dolores! Sit explicabo odio a</p>
+                <div class="get-btn" data-aos="fade-left" data-aos-delay="300"><a href="https://wa.me/+971543266421" >Order Now</a></div>
             </div>
             <div class="banner-image">
                 <div class="img-div"></div>
-                <img src="./images/123.png" alt="">
+                <img src="./images/123.png" alt=""data-aos="fade-right" data-aos-delay="200">
             </div>
         </div>
     </div>
@@ -184,6 +188,7 @@
         display: flex;
         flex-direction: column;
         gap: 40px;
+        overflow: hidden;
     }
     .product-list{
         display: grid;
@@ -269,7 +274,7 @@
 
 <section style="padding: 130px 0;">
     <div class="container produt-cont">
-        <div class="product-list">
+        <div class="product-list" data-aos="fade-left" >
             <div class="product-img"><img src="./images/3d-rendering-luxury-modern-living-room-with-leather-sofa-lamp.jpg" alt=""></div>
             <div class="product-disc">
                 <h2>Flooring Expertise</h2>
@@ -278,7 +283,7 @@
                 <div class="open-btn open-btn-1">Read more</div>
             </div>
         </div>
-        <div class="product-list product-list-2">
+        <div class="product-list product-list-2" data-aos="fade-right" >
             <div class="product-disc">
                 <h2>Furniture for Every Space</h2>
                 <h4>Bedroom set, wardrobe, office furniture</h4>
@@ -287,7 +292,7 @@
             </div>
             <div class="product-img"><img src="./images/landbgmain.jpg" alt=""></div>
         </div>
-        <div class="product-list">
+        <div class="product-list" data-aos="fade-left" >
             <div class="product-img"><img src="./images/3d-rendering-luxury-modern-living-room-with-leather-sofa-lamp.jpg" alt=""></div>
             <div class="product-disc">
                 <h2>Curtains and Blinds Elegance</h2>
@@ -296,7 +301,7 @@
                 <div class="open-btn open-btn-3">Read more</div>
             </div>
         </div>
-        <div class="product-list product-list-2">
+        <div class="product-list product-list-2" data-aos="fade-right" >
             <div class="product-disc">
                 <h2>Wallpaper and Wall Cladding Statements</h2>
                 <h4>Wallpaper & Wall cladding</h4>
@@ -317,7 +322,6 @@
     /* height: 100vh; */
     z-index: 99999;
     inset: 0;
-    /* background-color: #994D22; */
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -335,16 +339,21 @@
 }
 .model-container{
     max-width: 500px;
-    height: 80vh;
+    /* height: 80vh; */
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
     align-items: center;
     justify-content: center;
     background-color: #fff;
-    padding: 50px;
-    overflow: hidden;
+    padding: 50px 40px;
+    overflow: auto;
     position: relative;
+    border-radius: 10px;
+}
+.model-container::-webkit-scrollbar{
+    visibility: hidden;
+    display: none;
 }
 .model-img{
     flex-grow: 1;
@@ -365,8 +374,8 @@
 .close-img{
         display: block;
         position: absolute;
-        right: 30px;
-        top: 30px;
+        right: 20px;
+        top: 20px;
         cursor: pointer;
         transition: all .2s;
         width: 28px;
