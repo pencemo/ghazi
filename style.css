@@ -818,16 +818,21 @@ body{
 
   .swiper-slide {
     cursor: pointer;
-    height: 350px;
-    background: #ffffff;
+    height: 600px;
+    background: var(--balck-color);
     display: flex;
-    justify-content: center;
-    align-items: center;
+    flex-direction: column;
+    /* justify-content: center; */
+    /* align-items: center; */
     position: relative;
     z-index: 8;
     overflow: hidden;
   }
-
+.imgwrap{
+    width: 100%;
+    height: 70%;
+    overflow: hidden;
+}
   .swiper-slide img {
     display: block;
     width: 100%;
@@ -843,34 +848,39 @@ body{
   }
 
 .pading{
-    position: absolute;
+    margin: 20px;
     z-index: 1;
-    width: 100%;
-    height: 100%;
-    background-image: linear-gradient(360deg,rgba(0, 0, 0, 0.6), rgba(253, 253, 253, 0));
 }
 .pading h1{
-    position: absolute;
-    bottom: 0;
-    left: 25px;
     color: #fff;
-    font-size: 20px;
-    font-weight: 300;
-    opacity: 0;
-    transition: all .3s linear;
+    font-size: 22px;
+    font-weight: 500;
 }
-.pading i{
-    position: absolute;
-    top: 25px;
-    right: 25px;
+.pading p{
     color: #fff;
-    font-size: 20px;
+    font-size: 13px;
+    font-weight: 300;
+}
+ 
+
+.show-btn{
+    margin-top: 15px;
 }
 
-.pading:hover h1{
-    opacity: 1;
-   bottom: 25px;
-  }
+.show-btn a{
+    cursor: pointer;
+    display: inline;
+    background-color: var(--flame);
+    color: #fff;
+    padding: 7px 15px;
+    transition: all .5s;
+}
+.show-btn a:hover{
+    background-color: var(--second-color);
+    color: #fff;
+    letter-spacing: 5px;
+}
+
 
 
 /* whatsappicon */

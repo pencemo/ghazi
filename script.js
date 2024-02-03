@@ -1,6 +1,6 @@
 var swiper = new Swiper(".mySwiper", {
-  slidesPerView: 2,
-  spaceBetween: 10,
+  slidesPerView: 1,
+  spaceBetween: 20,
   // effect: "fade",
   autoplay: {
     delay: 2500,
@@ -15,13 +15,13 @@ var swiper = new Swiper(".mySwiper", {
 
   breakpoints: {
     576: {
-      slidesPerView: 3,
+      slidesPerView: 2,
     },
     768: {
-      slidesPerView: 4,
+      slidesPerView: 3,
     },
     1200: {
-      slidesPerView: 6,
+      slidesPerView: 5,
     },
   },
   // navigation: {
