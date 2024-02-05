@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ghazi Homeware</title>
+    <link rel="shortcut icon" type="image/png" href="./images/logo-3.png">
+
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+
+    
+    <!-- https://swiperjs.com  slide animation cdn-->
+    <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
+    <!-- https://github.com/michalsnik/aos  scroll animation cdn-->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <link rel="stylesheet" href="./style.css">
+        
+    <!-- demo fontawoisome -->
+    <link rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/all.css">
+    <link rel="stylesheet"href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-solid.css">
+    <link  rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-regular.css">
+    <link  rel="stylesheet" href="https://site-assets.fontawesome.com/releases/v6.4.2/css/sharp-light.css" >
+    <!-- demo font -->
+
+    <!-- google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Raleway:wght@100;200;300;400;600;700&display=swap" rel="stylesheet">
+
+</head>
+<body>
+    <div class="loader-div">
+        <span class="loader"></span>
+    </div>
+
+    <div class="scoll-ind"></div>
+    
+    <nav class="nav-bar">
+        <div class="container">
+            <div class="raw nav-container">
+                <div class="logo"><a href="index.html"><img src="./images/logo-1.png" alt=""></a></div>
+                <div class="backgrund"></div>
+                <div class="nav-links">
+                    <ul class="nav-links-ul">
+                        <li class="main-li"><a href="#">Home</a></li>
+                        <li class="main-li"><a href="./About.html">About Us</a></li>
+                        <li class="main-li"><a href="./product.html">Products</a></li>
+                        <li class="main-li"><a href="./contact.html">Contact</a></li>
+                        <div id="google_translate_element"></div>
+                        <div class="close"><i class=" fa-sharp fa-regular fa-xmark-large "></i></div>
+                        <div class="nav-icos">
+                            <a href="https://www.facebook.com/profile.php?id=100090192650725&mibextid=ZbWKwL"><i class="fa-brands fa-facebook"></i></a>
+                            <a href="https://www.instagram.com/mghazifurniture?igsh=NWNnZGZyNjZpd2Jl"><i class="fa-brands fa-instagram"></i></a>
+                            <a href="mailto:mghazitrading@gmail.com"><i class="fa-solid fa-envelope"></i></a>
+                            <a href="https://wa.me/+971543266421"><i class="fa-brands fa-whatsapp"></i></a>
+                        </div>
+                    </ul>
+                </div>
+                <div class="toggle-btn" onclick="nav_toggle()"><i class="fa-sharp fa-regular fa-bars"></i></div>
+            </div>
+        </div>
+    </nav>
+<!-- *************************** -->
+
+
+<!-- **************** -->
+<style>
+    .choose-img{
+        height: 80%;
+    }
+    .choose-text h1{
+        margin-top: 10px;
+    }
+
+    .choose-text h5{
+        font-family: 'Raleway', sans-serif;
+        color: #aaaaaa;
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+
+</style>
+
+
+<section class="section-2">
+    <div class="container ">
+      <div class="why-choose">
+        <div class="choose-img" >
+            <img src="./images/img-6.jpg" alt="" data-aos="zoom-out">
+        </div>
+        <div class="choose-text" >
+            <h5 data-aos="fade-left" data-aos-delay="200">Our Product</h5>
+            <h1 data-aos="fade-left" data-aos-delay="200"><span>Curtains</span> and Blinds Elegance</h1>
+            <h6 data-aos="fade-left" data-aos-delay="300">Sofas and Upholstery, blinds Arabic Majlis</h6>
+            <p data-aos="fade-left" data-aos-delay="350">Adorn your windows with sophistication from our curtains and blinds collection. Our range includes upholstery fabrics that combine comfort with style, and blinds that strike the perfect balance between natural light and privacy. At Ghazi Homeware, we understand the importance of window treatments in creating the perfect ambiance for your home</p>
+            <div class="get-btn " data-aos="fade-left" data-aos-delay="350"><a href="https://wa.me/+971543266421" >Buy Now</a></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ********************************* -->
+
+
+
+  <style>
+    .model-container{
+        display: flex;
+    }
+    .model-img{
+        margin: 10px 0;
+        height: 250px;
+    }
+
+    .model-img img{
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+  </style>
+    
+<div class="container ">
+    <div class="row  justify-content-center model-container" >
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (1).jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (2).jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (3).jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (4).jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (5).jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (6).jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (7).jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (8).jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (9).jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (10).jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (11).jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (12).jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (13).jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (14).jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (15).jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (16).jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (17).jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (18).jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (19).jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (20).jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (21).jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (22).jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (23).jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (24).jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (25).jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img src="./images/cutaine/curtain (26).jpg" alt=""> </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- footr ***** -->
+
+<footer>
+    <div class="container">
+        <div class="row footer-set justify-content-center " >
+            <div class="col-sm-6 col-md-6 col-lg-4  footer-set-box">
+              <div>
+                <img class="logo-footer" src="./images/logo-1.png" alt="">
+                <p class="logo-des">Ghazi Homeware envisions homes reflecting individuality, comfort, and timeless elegance. We curate homeware that meets functional needs and inspires aesthetic pleasure.</p>
+                <div class="footer-icon">
+                    <a href="https://www.facebook.com/profile.php?id=100090192650725&mibextid=ZbWKwL"><div class="icon-round"><i class="fa-brands fa-facebook-f"></i></div> </a>
+                    <a href="https://www.instagram.com/mghazifurniture?igsh=NWNnZGZyNjZpd2Jl"><div class="icon-round"><i class="fa-brands fa-instagram"></i></div> </a>
+                    <a href="https://wa.me/+971543266421"><div class="icon-round"><i class="fa-brands fa-whatsapp"></i></div> </a>
+                    <a href="mailto:mghazitrading@gmail.com"><div class="icon-round"><i class="fa-solid fa-envelope"></i></div> </a>
+                </div>
+              </div>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-2 footer-set-box" >
+              <h3 class="footer-head">Quick Links</h3>
+              <ul class="footer-links">
+                <li><a href="#">Go to Home</a></li>
+                <li><a href="./About.html">About Us</a></li>
+                <li><a href="./product.html">Our Products</a></li>
+                <li><a href="">Project</a></li>
+                <li><a href="./contact.html">Contact Info</a></li>
+              </ul>
+            </div>
+            <div class="col-sm-6 col-md-3 col-lg-2 footer-set-box" >
+                <h3 class="footer-head">Our Products</h3>
+                <ul class="footer-links">
+                    <li>Flooring</li>
+                    <li>Curtains</li>
+                    <li>Wallpaper</li>
+                    <li>Wall cladding</li>
+                    <li>Furniture</li>
+                  </ul>
+            </div>
+            <div class="col-sm-6 col-md-6 col-lg-4 footer-set-box">
+                <h3 class="footer-head">Office</h3>
+                <p class="logo-des footer-ads">5 18th Street - Deira, Dubai - United Arab Emirates</p>
+                <div class="footer-contact-dts"><a href="tel:+971543266421"><i class="fa-sharp fa-solid fa-phone"></i>+971 54 326 6421</a></div>
+                <div class="footer-contact-dts"><a href="mailto:mghazitrading@gmail.com"><i class="fa-solid fa-envelope"></i>mghazitrading@gmail.com</a></div>
+                <div class="footer-input">
+                    <input type="text" placeholder="Enter Your Email" autocomplete="of">
+                    <i class="fa-sharp fa-solid fa-paper-plane"></i>
+                </div>
+            </div>
+    
+        </div>
+        
+        
+
+        <div class="raw bottom-line"></div>
+        <div class="raw Copyright-raw">
+            <p>© All Copyright reserved By Ghazi Homeware, 2024</p>
+            <p>Powered by <a href="https://neptunemark.com/">NeptuneMark</a></p>
+        </div>
+    </div>
+</footer>
+
+
+<!-- scrip links -->
+
+    <!-- google tran  -->
+    <script type="text/javascript" src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+
+
+    <!-- type animation cdn -->
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+
+    <!-- slide animation cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script> <!-- jquery.com -->
+
+    <!-- scroll animation cdn -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+
+    <script src="./script.js"></script>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>

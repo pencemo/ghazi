@@ -184,6 +184,9 @@
 
 <!-- ********************** -->
 <style>
+    a{
+        color: #fff;
+    }
     .produt-cont{
         display: flex;
         flex-direction: column;
@@ -280,7 +283,7 @@
                 <h2>Flooring Expertise</h2>
                 <h4>Carpet, PVC, SPC, artificialgrass, gymmate, rugs masjid carpet and carpets for hotel</h4>
                 <p>Explore our flooring section, where innovation meets luxury. Whether you seek the warmth of carpets, the resilience of PVC and SPC options, the natural allure of grass carpets, or specialized solutions like gymmate flooring, we have the perfect flooring solution for every room and purpose. Our rugs and masjid carpets add a touch of tradition and refinement to any space.                </p>
-                <div class="open-btn open-btn-1">Read more</div>
+                <div class="open-btn"><a href="./floring.html">Read more</a></div>
             </div>
         </div>
         <div class="product-list product-list-2" data-aos="fade-right" >
@@ -288,7 +291,7 @@
                 <h2>Furniture for Every Space</h2>
                 <h4>Bedroom set, wardrobe, office furniture</h4>
                 <p>Furnish your home with distinctive pieces from our furniture collection. Whether you're looking for a complete bedroom set, spacious wardrobes, comfortable sofas, or functional office furniture, Ghazi Homeware offers an exclusive range to suit your needs. Our designs combine practicality with aesthetics for a harmonious living experience.                </p>
-                <div class="open-btn open-btn-2">Read more</div>
+                <div class="open-btn"><a href="./Furniture.html">Read more</a></div>
             </div>
             <div class="product-img"><img src="./images/landbgmain.jpg" alt=""></div>
         </div>
@@ -298,7 +301,7 @@
                 <h2>Curtains and Blinds Elegance</h2>
                 <h4>Sofas and Upholstery, blinds Arabic Majlis</h4>
                 <p>Adorn your windows with sophistication from our curtains and blinds collection. Our range includes upholstery fabrics that combine comfort with style, and blinds that strike the perfect balance between natural light and privacy. At Ghazi Homeware, we understand the importance of window treatments in creating the perfect ambiance for your home</p>
-                <div class="open-btn open-btn-3">Read more</div>
+                <div class="open-btn"><a href="./Curtain.html">Read more</a></div>
             </div>
         </div>
         <div class="product-list product-list-2" data-aos="fade-right" >
@@ -306,7 +309,7 @@
                 <h2>Wall Coverings</h2>
                 <h4>Wallpaper & Wall cladding</h4>
                 <p>Transform your walls into works of art with our carefully selected wallpapers and wall cladding options. From classic to contemporary, our collection caters to diverse tastes, providing a backdrop that complements your style. Ghazi Homeware ensures that every wall tells a unique story</p>
-                <div class="open-btn open-btn-4">Read more</div>
+                <div class="open-btn"><a href="./Wallpaper.html">Read more</a></div>
             </div>
             <div class="product-img"><img src="./images/img-31.jpg" alt=""></div>
         </div>
@@ -335,36 +338,30 @@
     width: 100%;
     height: 100%;
     position: absolute;
-    background-color: rgba(0, 0, 0, .9);
+    background-color: rgba(0, 0, 0, .8);
 }
 .model-container{
     width: 100%;
-    height: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    align-items: center;
-    justify-content: center;
+    height: auto;
     background-color: #fff;
-    padding: 50px 40px;
+    padding: 40px;
     overflow: auto;
     position: relative;
-    /* border-radius: 10px; */
 }
 .model-container::-webkit-scrollbar{
     visibility: hidden;
     display: none;
 }
 .model-img{
-    flex-grow: 1;
-    min-width: 170px;
-    max-width: 300px;
+    /* background-color: #994D22; */
     height: 200px;
+    margin:10px 0;
 }
 .model-img img{
     width: 100%;
     height: 100%;
     object-fit: cover;
+    background-color: #fff;
 }
 
 .model-active{
@@ -384,6 +381,7 @@
         display: grid;
         place-content: center;
         border-radius: 50%;
+        background-color: #fff;
     }
     .close-img:hover{
         background-color: #1f1f1f;
@@ -400,7 +398,7 @@
 </style>
 
 
-<div class="model">
+<!-- <div class="model">
     <div class="model-background"></div>
     <div class="model-container">
         <div class="close-img "><i class=" fa-sharp fa-regular fa-xmark-large "></i></div>
@@ -412,7 +410,25 @@
         <div class="model-img "><img class="model-img-6" src="" alt=""></div>
         <div class="model-img "><img class="model-img-7" src="" alt=""></div>
     </div>
+</div> -->
+
+
+<!-- <div class="model model-1">
+    <div class="model-background"></div>
+    <div class="row container  justify-content-center model-container" >
+        <div class="close-img "><i class=" fa-sharp fa-regular fa-xmark-large "></i></div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img class="model-img-1" src="./images/3d-rendering-luxury-modern-living-room-with-leather-sofa-lamp.jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img class="model-img-2" src="./images/627.png" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img class="model-img-3" src="./images/img-14.jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img class="model-img-4" src="./images/img-2.jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img class="model-img-4" src="./images/img-2.jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img class="model-img-4" src="./images/img-2.jpg" alt=""> </div>
+        <div class="col-sm-6 col-md-6 col-lg-4 model-img"> <img class="model-img-4" src="./images/img-2.jpg" alt=""> </div>
+    </div>
 </div>
+ -->
+
+
 
 
 <!-- footr ***** -->
