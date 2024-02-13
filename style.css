@@ -483,6 +483,20 @@ body{
     color: var(--flame);
 }
 
+.land-btn{
+    width: 80vw;
+    /* background-color: #994D22; */
+    height: 10px;
+}
+
+.land-btn a{
+    /* background-color: #25d366; */
+    padding: 10px  40%;
+}
+
+
+
+
 
 @media (max-width: 768px){
     .contant h1{
